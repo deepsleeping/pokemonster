@@ -19,8 +19,8 @@ class Pokemon:
 	max_hp = 0
 	damage = 0
 	#skill_list=[]
-	level = 0
 	exp = 0
+	level = 0
 	upgrade = ""
 
 	def __init__(self,name,max_hp,damage,level,upgrade):
@@ -38,7 +38,11 @@ class Pokemon:
 				trainer.pokemon_list.append(enemy)
 				#trainer.pokemon_dict.append(enemy.name)
 				print("{}를 잡았습니다!!!".format(enemy.name))
-
+	def level_up(self):
+		if self.exp>=self.level*100:
+			self.exp=0
+			self.level +=1
+			print("당신의 포켓몬{}가 레벨업을 하였습니다!".format(self.pokemon_list))
 		
 
 
