@@ -1,4 +1,20 @@
+import random,time
 from classes import Trainer, Pokemon ,Hospital
+
+pokemon1=Pokemon("이상해씨",25,10,1,"이상해풀")
+pokemon2=Pokemon("이상해풀",80,20,1,"이상해꽃")
+pokemon3=Pokemon("이상해꽃",120,30,1,"최종 진화")
+pokemon4=Pokemon("파이리",25,10,1,"리자드")
+pokemon5=Pokemon("꼬부기",25,10,1,"어니부기")
+
+
+# pokemon_enemy=[이상해씨,이상해풀,이상해꽃
+
+
+
+
+# 			]
+
 
 print("Welcome To Pokemon World")
 
@@ -20,3 +36,20 @@ else:
 trainer =Trainer(playername,pokemon)
 
 print(trainer.pokemon_list[0].name)
+
+trainer.pokemon_list.append(pokemon1)
+trainer.pokemon_list.append(pokemon2)
+trainer.pokemon_list.append(pokemon3)
+
+trainer.change_pokemon()
+
+
+# situation=input("야생에 진입 하시겠습니까? Y/N")
+# if situation==Y:
+# 	while True:
+# 		if pokemon.curr_hp>0:
+# 			pokemon =random.choice(pokemon_enemy)
+# 			print("앗! 야생{}이(가) 나타났다!".format(pokemon.pokemon))
+
+		
+
